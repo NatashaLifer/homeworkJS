@@ -19,11 +19,11 @@
 // А потім просто використати метод масиву fill() і не заморачуватися з разними value та просто передати якийсь один параметр
 // Рекомендую почитати документацію по new Array() та fill() і переписати з урахуванням поправок на вітер) 
 
-const fill = (arraySize, value) => {
-    let arrToFill = new Array(arraySize).fill(value);     
-    return arrToFill
-}
-console.log(fill(3, 'S'));
+// const fill = (arraySize, value) => {
+//     let arrToFill = new Array(arraySize).fill(value);     
+//     return arrToFill
+// }
+// console.log(fill(3, 'S'));
 
 
 
@@ -76,8 +76,11 @@ console.log(fill(3, 'S'));
 // const sortArray = firstArray.concat(...secondArray).sort((a, b) => {return a - b;})
 // return sortArray   
 // }
+
+const mergeArrays = (firstArray, secondArray) =>
+  [...firstArray, ...secondArray].sort((a, b) => a - b);
                 
-// console.log(mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]))
+console.log(mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]))
                 
                 
                 
